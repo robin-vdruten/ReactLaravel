@@ -18,6 +18,32 @@
   cursor: pointer;
 }
 
+.a {
+  text-decoration: none;
+}
+
+.delete {
+  background-color: #a90b0b;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.show {
+  background-color: #0092be;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.update {
+  background-color: green;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .profile {
   margin-right: 40px;
 }

@@ -64,7 +64,7 @@ function Login() {
         <button onClick={login} className="btn btn-primary">
           login
         </button>
-        <div class="error">{error}</div>
+        <div className="error">{error}</div>
       </div>
     </div>
   );

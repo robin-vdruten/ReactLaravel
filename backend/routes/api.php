@@ -23,3 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register', [Controlleruser::class, 'register']);
 Route::post('login', [Controlleruser::class, 'login']);
 Route::post('addproduct', [Controllerproduct::class, 'addProduct']);
+Route::get('list', [Controllerproduct::class, 'list']);
+Route::delete('delete/{id}', [Controllerproduct::class, 'delete']);
+Route::get('product/{id}', [Controllerproduct::class, 'getProduct']);
+Route::put('updateproduct/{id}', [Controllerproduct::class, 'updateProduct']);
+Route::get('search/{key}', [Controllerproduct::class, 'search']);

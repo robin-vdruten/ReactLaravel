@@ -6,9 +6,18 @@ import Header from "./Header.js";
 function SearchProduct() {
   const [data, setData] = useState([]);
 
+  useEffect(() => {
+    async function showProduct() {
+      let result = await fetch("http://localhost:8000/api/list");
+      result = await result.json();
+      setData(result);
+    }
+    showProduct();
+  }, []);
+
   async function search(key) {
     if (!key) {
-      key = "search";
+      key = "nothing";
     }
     let result = await fetch("http://localhost:8000/api/search/" + key);
     result = await result.json();

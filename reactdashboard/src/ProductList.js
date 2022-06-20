@@ -5,6 +5,7 @@ import Header from "./Header";
 
 function ProductList() {
   const [data, setData] = useState([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     getData();
@@ -15,7 +16,7 @@ function ProductList() {
       method: "DELETE",
     });
     result = await result.json();
-    console.log(result);
+    setError(JSON.stringify(result.result));
     getData();
   }
   async function getData() {
@@ -28,6 +29,7 @@ function ProductList() {
     <div>
       <Header />
       <h1>Product list</h1>
+      <div className="error">{error}</div>
       <div className="col-sm-6 offset-sm-3">
         <Table>
           <thead>

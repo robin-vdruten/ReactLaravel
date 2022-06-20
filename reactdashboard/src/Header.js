@@ -23,7 +23,7 @@ function Header() {
     <div>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Dashboard</Navbar.Brand>
+          <Navbar.Brand href="/">Dashboard</Navbar.Brand>
           <Nav className="me-auto navbar_wrapper">
             {localStorage.getItem("userinfo") ? (
               <>

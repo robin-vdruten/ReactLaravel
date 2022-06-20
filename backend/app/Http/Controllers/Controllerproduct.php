@@ -52,7 +52,7 @@ class Controllerproduct extends Controller
     {
         $result = Product::where('id', $id)->delete();
         if ($result) {
-            return ['result' => 'product has been deleted'];
+            return ['result' => 'product has been deleted with id ' . $id];
         } else {
             return ['result' => 'failed to delete product'];
         }
